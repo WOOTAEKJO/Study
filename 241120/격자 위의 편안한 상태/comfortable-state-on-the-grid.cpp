@@ -33,11 +33,11 @@ int main() {
         for(int k = 0; k<4;k++)
         {
             if(InRange(point[0]-1 + dx[k],point[1]-1+dy[k],n) && array[point[0]-1 + dx[k]][point[1]-1+dy[k]] == 1)
-                iCount ++;
+                iCount++;
 
         }
 
-        if(iCount >= 3)
+        if(iCount == 3)
             cout <<1;
         else
             cout << 0;

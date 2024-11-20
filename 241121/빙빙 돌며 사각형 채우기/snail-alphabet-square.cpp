@@ -42,7 +42,12 @@ int main() {
     for(auto nums : array)
     {
         for(auto num : nums)
-            cout << char(num + 64) << " ";
+        {   
+            int temp = num % 26;
+
+            cout << char(((temp == 0) ? 26 : temp) + 64) << " ";
+        }
+            
 
         cout << endl;
     }

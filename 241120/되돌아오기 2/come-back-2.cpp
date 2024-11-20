@@ -40,7 +40,7 @@ int main() {
             break;
     }
 
-    if(iCount > str.size())
+    if(iCount >= str.size())
         cout << -1;
     else   
         cout << iCount;

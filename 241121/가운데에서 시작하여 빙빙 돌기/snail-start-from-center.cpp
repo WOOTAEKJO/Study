@@ -14,24 +14,24 @@ int main() {
     int dx[4] = {0,1,0,-1};
     int dy[4] = {1,0,-1,0};
 
-    int dir = 0;
+    int dir = 2;
 
     cin >> n;
 
     vector<vector<int>> array(n);
 
-    int point[2] = {n/2,n/2};
+    int point[2] = {n-1,n-1};
 
     for(auto& nums : array)
         nums.resize(n);
 
-    array[point[0]][point[1]] = 1;
+    array[point[0]][point[1]] = n * n;
 
-    for(int i = 2;i<=(n*n);i++)
+    for(int i = (n*n) - 1; i > 0;i--)
     {
         if(!InRange(point[0] + dx[dir],point[1] + dy[dir],n) ||
             array[point[0] + dx[dir]][point[1] + dy[dir]] != 0)
-            dir = (dir -1 + 4) % 4;
+            dir = (dir + 1) % 4;
 
         point[0] += dx[dir];
         point[1] += dy[dir];

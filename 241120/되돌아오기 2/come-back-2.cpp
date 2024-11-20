@@ -20,6 +20,7 @@ int main() {
     int dir = 3;
 
     int point[2] = {};
+    bool bCheck = false;
 
     string str;
 
@@ -37,10 +38,13 @@ int main() {
         iCount++;
 
         if(point[0] == 0 && point[1] == 0)
+        {
+            bCheck = true;
             break;
+        }  
     }
 
-    if(iCount >= str.size())
+    if(!bCheck)
         cout << -1;
     else   
         cout << iCount;
